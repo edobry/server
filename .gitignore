@@ -13,3 +13,8 @@ results
 
 npm-debug.log
 node_modules
+
+bin*
+.sublime-grunt.cache
+server.sublime-workspace
+tscommand.tmp.txt

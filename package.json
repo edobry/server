@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "description": "server\r ======",
+  "main": "server.js",
+  "dependencies": {
+    "grunt": "~0.4.2"
+  },
+  "devDependencies": {
+    "grunt-typescript": "~0.2.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/edobry/server.git"
+  },
+  "author": "edobry",
+  "gitHead": "788fb913dbcb82bda1f24c936fbbcc29dc215eeb",
+  "readmeFilename": "README.md"
+}
