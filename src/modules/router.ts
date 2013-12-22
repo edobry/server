@@ -1,7 +1,8 @@
 /// <reference path="../../typings/reference.ts"/>
 
-var store = require("store");
-var f = require("f");
+var f = require("./f");
+var store = require("./store");
+var tracer = require("./console-tracer");
 
 export interface Route {
 	path: string;
@@ -9,9 +10,12 @@ export interface Route {
 };
 
 export var Register = (routes: Object): void => {
-	f.oMap(routes, (path, cb) => store.add(cb, path));
+	var count = 0;
+	f.oMap(routes, (path, cb) => { count++; store.Add(cb, path); });		
+    tracer.trace("ROUTER " + count + " routes registered", tracer.MessageType.Info);
 };
 
 export var Route = (route, data) => {
+	tracer.trace("ROUTER route:" + route + ", data:" + data, tracer.MessageType.Info);
 	store.get(route)(data);
 };

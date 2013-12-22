@@ -2,6 +2,7 @@
 // https://github.com/billywhizz/nodeftpd/blob/master/dummyfs.js
 
 var sys = require("sys");
+var tracer = require("./console-tracer");
 
 var _dir = "/";
 
@@ -40,3 +41,5 @@ export var chdir = (dir: string): string => {
 };
 
 export var cwd = ():string => _dir;
+
+tracer.trace("DUMMYFS Initialized", tracer.MessageType.Info);
